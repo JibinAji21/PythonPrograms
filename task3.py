@@ -35,7 +35,6 @@
 #     print("friday")
 # elif(number==7):
 #     print("saturday")  
-# else:
 #     print("invalid") 
      
 #question4
@@ -51,7 +50,7 @@
 #     print("Jai mahal") 
 # else:
 #     print("invalid input")  
-city=input("enter your city")
+#city=input("enter your city")
 # city=city.lower()
 # if(city=="delhi"):
 #     print("Redfort")
@@ -60,15 +59,42 @@ city=input("enter your city")
 # elif(city=="jaipur"):
 #     print("Jai mahal") 
 # else:
-#     print("invalid input")  
+#     print("invalid input") 
 
 
 #question5
 
-number=int(input("enter a number"))
+# number=int(input("enter a number"))
+# if last digit%3==0:
+# print("")
 
 
 
 
 
-    
+#=int(input("enter a number"))
+# if last digit%3==0:
+# print("")
+
+
+
+
+
+
+
+
+
+
+
+
+#question6
+
+cost=int(input("enter bike cost"))
+if(cost>100000):
+    print("tax amount",(cost*0.15)+cost)
+elif(cost >= 50000):
+    print("tax amount",(cost*0.1+cost))
+else:
+    print("tax amount",(cost*0.05+cost))
+          
+
