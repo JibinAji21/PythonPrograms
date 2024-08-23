@@ -1,3 +1,4 @@
+import datetime
 employee=[]
 while True:
     print(
@@ -23,10 +24,10 @@ while True:
         experience=int(input("year of experience"))
         employee.append([id,name,age,phone,place,position,salary,experience])
     elif choice==2:
-         print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<10}{:<10}{:<5}'.format('id','name','age','phone','place','position','salary','experience'))
+         print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<12}{:<12}{:<12}'.format('id','name','age','phone','place','position','salary','experience'))
          print('-'*50)
          for i in employee:
-            print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<10}{:<10}{:<5}'.format(i[0],i[1],i[2],i[3],i[4],i[5],i[6],i[7]))
+            print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<12}{:<12}{:<12}'.format(i[0],i[1],i[2],i[3],i[4],i[5],i[6],i[7]))
     elif choice==3:
         id=int(input("enter employee id"))
         f=0
@@ -96,6 +97,55 @@ while True:
                 break
             else:
                 print("invalid choice")
+    elif choice==4:
+        id=int(input("enter employee id"))
+        f=0
+        for i in employee:
+            if id in i:
+                employee.remove(i)
+                f=1
+        if f==0:
+            print("invalid id")
+    elif choice==5:
+        id=int(input("enter employee id"))
+        f=0
+        for i in employee:
+            if id in i:
+                f=1
+                task=input("enter task")
+                date=datetime.datetime.now().strftime("%x")
+                days=int(input("how many days"))
+                i.append([task,date,days])
+        if f==0:
+            print("employee not found")
+    elif choice==6:
+        id=int(input("enter employee id"))
+        f=0
+        for i in employee:
+            if id in i:
+                f=1
+                print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<12}{:<12}{:<12}'.format('id','name','age','phone','place','position','salary','experience'))
+                print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<12}{:<12}{:<12}'.format(i[0],i[1],i[2],i[3],i[4],i[5],i[6],i[7]))
+
+                print("work details")
+                print(len(i))
+                if len(i)==9:
+                    print(i[8])
+                else:
+                    print("no work available")
+        if f==0:
+            print("employee not found")
+    elif choice==7:
+        break
+    else:
+        print("invalid choice")
+
+
+
+
+
+
+
                  
 
 
