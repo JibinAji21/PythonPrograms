@@ -1,3 +1,5 @@
+# student management using list
+
 student=[]
 while True:
     print(
