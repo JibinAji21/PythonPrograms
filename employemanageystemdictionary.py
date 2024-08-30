@@ -9,9 +9,8 @@ while True:
     2.View employee list
     3.Update employee list
     4.Delete employee list
-    5.Tasks
-    6.Search employee
-    7.Exit
+    5.Search employee
+    6.Exit
     '''
     )
     choice=int(input("enter a choice"))
@@ -40,7 +39,7 @@ while True:
             2.Update phone no
             3.Update place
             4.Update position
-            5.Updatr salary
+            5.Update salary
             6.Update experience
             7.Exit
             ''')
@@ -106,19 +105,8 @@ while True:
                 f=1
         if f==0:
             print("invalid id")
+    
     elif choice==5:
-        id=int(input("enter employee id"))
-        f=0
-        for i in employee:
-            if i['id']==id:
-                f=1
-                task=input("enter task")
-                date=datetime.datetime.now().strftime("%x")
-                days=int(input("how many days"))
-                i['task']=[task,date,days]
-        if f==0:
-            print("employee not found")
-    elif choice==6:
         id=int(input("enter employee id"))
         f=0
         for i in employee:
@@ -134,7 +122,7 @@ while True:
                     print("no work available")
         if f==0:
             print("employee not found")
-    elif choice==7:
+    elif choice==6:
         break
     else:
         print("invalid choice")
