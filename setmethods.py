@@ -74,7 +74,7 @@
 
 # {2, 3, 4}
 
-# 8) s,update() - to update values in a set
+# 8) s.update() - to update values in a set
 
 # s={1,2,3,4,5,6}
 # s.update({10})
@@ -83,6 +83,105 @@
 # # output
 
 # {1, 2, 3, 4, 5, 6, 10}
+
+# 9) s.intersection() - used to display commom values of two sets
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# print(s.intersection(s1))
+
+# # output
+
+# {1, 2, 3}
+
+# 10) s.union() 
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# print(s.union(s1))
+
+# # output
+
+# {1, 2, 3, 4, 5, 6, 7}
+
+# 11) s.isdisjoint()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# print((s.isdisjoint(s1)))
+
+# # output
+
+# False
+
+# 12) s.issubset()
+
+# s={1,2,3,4,5}
+# s1={1,2,3}
+# print((s1.issubset(s)))
+
+# # output
+
+#    True
+
+# 13) s.issuperset()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# print(s.issuperset(s1))
+
+# # output 
+
+# False
+
+# 14) s.symmetric_difference()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# print(s.symmetric_difference(s1))
+
+# # output
+
+# {4, 5, 6, 7}
+
+# 15) s.difference_update()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# s.difference_update(s1)
+# print("s=",s)
+
+# # output
+
+# s= {4, 5}
+
+# 16) s.intersection_update()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# s.intersection_update(s1)
+# print("s=",s)
+
+# # output
+
+# s= {1, 2, 3}
+
+# 17) s.symmetric_difference_update()
+
+# s={1,2,3,4,5}
+# s1={1,2,3,6,7}
+# s.symmetric_difference_update(s1)
+# print("s=",s)
+
+# # output
+
+# s= {4, 5, 6, 7}
+
+
+
+
+
+
 
 
 
