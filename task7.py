@@ -34,10 +34,10 @@
 
 # divisible by 2 and square of that numbers
 
-l=[1,2,5,8,9,11,16,12]
-a=[0]
-b=[0]
-for i in l:
-    if i%2==0:
-        print(i)
+# l=[1,2,5,8,9,11,16,12]
+# a=[0]
+# b=[0]
+# for i in l:
+#     if i%2==0:
+#         print(i)
     

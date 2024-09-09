@@ -35,12 +35,12 @@
 
 # question 3) odd numbers 
 
-a=int(input("enter first number"))
-b=int(input("enter second number"))
-while a<=b:
-    if a%2==1:
-        print(a)
-    a+=1
+# a=int(input("enter first number"))
+# b=int(input("enter second number"))
+# while a<=b:
+#     if a%2==1:
+#         print(a)
+#     a+=1
 
 
 

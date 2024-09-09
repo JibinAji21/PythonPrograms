@@ -1,4 +1,5 @@
 #  tasks
+
 php=set()
 limit=int(input("how many students"))
 for i in range(limit):
@@ -29,7 +30,7 @@ unique=python.difference(php)
 u=python.difference(java)
 stpy=u.intersection(unique)
 print("python student=",stpy)
-# .........................
+# ..............................
 
 
 
