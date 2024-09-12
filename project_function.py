@@ -4,11 +4,16 @@ def login():
     uname=input("enter username")
     passw=input("enter password")
     f=0
+    user=''
     if uname=='admin' and passw =='admin':
         f=1
-        return f
+    for i in emp:
+        if i['id']==uname and i['password']==passw:
+            f=2
+            user=i
+    return f,user
 def add_emp():
-    id=int(input("enter ur id"))
+    id=str(input("enter ur id"))
     f1=0
     for i in emp:
         if i['id']==id:
@@ -21,9 +26,10 @@ def add_emp():
         salary=int(input("enter ur salary"))
         place=str(input("enter ur place"))
         dob=input('date of birth')
-        emp.append({'id':id,'name':name,'age':age,'salary':salary,'place':place,'dob':dob})
+        passw=dob
+        emp.append({'id':id,'name':name,'age':age,'salary':salary,'place':place,'dob':dob,'password':passw})
 def edit_emp():
-    id=int(input("enter ur id"))
+    id=str(input("enter ur id"))
     f1=0
     for i in emp:
         if i['id']==id:
@@ -41,7 +47,7 @@ def edit_emp():
     if f1==0:
         print('invalid ')
 def delete_emp():
-    id=int(input("enter ur id"))
+    id=str(input("enter ur id"))
     f1=0
     for i in emp:
         if i['id']==id:
@@ -54,6 +60,24 @@ def display_emp():
             print('-'*80)
             for i in emp:
                 print('{:<5}{:<8}{:<8}{:<12}{:<12}{:<12}'.format(i['id'],i['name'],i['age'],i['salary'],i['place'],i['dob']))
+def view_profile(user):
+    print(user)
+def edit_profile(user):
+    f1=0
+    for i in emp:
+        if i['id']==user['id']:
+            f1=1
+            name=str(input("enter ur name"))
+            age=int(input("enter ur age"))
+            salary=int(input("enter ur salary"))
+            place=str(input("enter ur place"))
+            dob=input('date of birth')
+            i['name']=name
+            i['age']=age
+            i['salary']=salary
+            i['place']=place
+            i['dob']=dob
+
 
 while True:
     print(
@@ -65,7 +89,7 @@ while True:
     )    
     ch=int(input("enter ur choice"))
     if ch==1:
-        f=login()
+        f,user=login()
         if f==1:
             while True:
                 print(
@@ -90,9 +114,26 @@ while True:
                     break
         elif f==0:
             print('invalid uname or passw')
-                    
-                    
+        elif f==2:
+            while True:
+                if user['dob']==user['password']:
+                    paasw=input('enter new password')
+                    user['password']=paasw
+                else:
+                    print(
+                        '''
+                        1.view profile
+                        2.edit profile
+                        3.logout
+                        '''
+                        )
+                    sub_ch=int(input("enter ur choice"))
+                    if sub_ch==1:
+                        view_profile(user)
+                    elif sub_ch==2:
+                        edit_profile(user)
+                    elif sub_ch==3:
+                        break
 
 
-
-
+              

@@ -43,4 +43,14 @@
 # # age= 22
 # .....................................................
 
+# 3) Default Argument
+
+# def sample(name='abc',age=20):
+#     print(name,age)
+# sample('manu',)
+
+# # output
+
+# manu 20
+
 
