@@ -52,5 +52,35 @@
 # # output
 
 # manu 20
+# .......................................................
+
+# 4) Arbitary Argument
+
+# def sample(b,*a):
+#     print(b,a)
+    
+# sample(10)
+# sample(1,2,3)
+# sample(1,2,3,3,2)
+
+# output
+
+# 10 ()
+# 1 (2, 3)
+# 1 (2, 3, 3, 2)
+# ................................................................
+
+
+# 5) Arbitary Keyword Argument
+
+# def sample(**a):
+#     print(a)
+# sample(name='anu',age=20)
+# sample(name='anu',age=20,name1='anu',age1=20)
+
+# # output
+
+# {'name': 'anu', 'age': 20}
+# {'name': 'anu', 'age': 20, 'name1': 'anu', 'age1': 20}
 
 
