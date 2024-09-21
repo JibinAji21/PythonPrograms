@@ -18,7 +18,7 @@ def register():
         address=input('enter your address')
         phone=int(input('enter ur phone no'))
         paasword=input('enter your password')
-        user.append({'id':id,'name':name,'address':address,'email':email,'phone':phone,'password':paasword})
+        user.append({'id':id,'name':name,'address':address,'email':email,'phone':phone,'password':paasword,'books':[]})
         
            
 def login():
@@ -41,7 +41,7 @@ def add_book():
     book_name=(input("enter book name"))
     book_stock=int(input("enter book stock"))
     book_price=int(input("enter book price"))
-    library.append({'book_id':book_id,'book_name':book_name,'book_stock':book_stock,'book_price':book_price,'books':[]})
+    library.append({'book_id':book_id,'book_name':book_name,'book_stock':book_stock,'book_price':book_price})
 def view_book():
     print('{:<5}{:<8}{:<8}{:<12}'.format('book_id','book_name','book_stock','book_price'))
     print('-'*50)
@@ -85,25 +85,30 @@ def view_books():
     print('-'*50)
     for i in library:
         print('{:<5}{:<8}{:<8}{:<12}'.format(i['book_id'],i['book_name'],i['book_stock'],i['book_price']))
-def take_book(u):
+def take_book(user):
     id=int(input("enter book id"))
     f=0
     for i in library:
         if i['book_id']==id:
             f=1
             if i['book_stock']>0:
-                user['books'].append(i['book_id'])
+                u['books'].append(i['book_id'])
                 i['book_stock']-=1
             else:
                 print("out of stock")
-def return_book(user):
+def return_book(u):
     id=int(input("enter book id"))
     f=0
     for i in library:
-        if i['book_id']==id:
+        if i['book_id']==id and id in u['books']:
             f=1
-def books_in_hand(user):
-    print(user['books'])
+            i['book_stock']+=1
+            u['books'].remove(id)
+            print('book returned')
+    if f==0:
+        print("book not found")
+def books_in_hand(u):
+    print(u['books'])
 
 
 while True:
@@ -167,9 +172,9 @@ while True:
                 elif sub_choice==3:
                     take_book(u)
                 elif sub_choice==4:
-                    return_book()
+                    return_book(u)
                 elif sub_choice==5:
-                    books_in_hand()
+                    books_in_hand(u)
                 elif sub_choice==6:
                     break
                 
