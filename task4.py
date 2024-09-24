@@ -10,6 +10,16 @@
 #multiplicationtable
 
 # num=int(input('enter a number'))
+# a=1
+# while a<=10:
+#     print(a,'*',num,"=",a*num)
+#     a+=1
+
+
+# reverse of a number
+
+
+# num=int(input('enter a number'))
 # rev=0
 # while num>0:
 #     d=num%10
