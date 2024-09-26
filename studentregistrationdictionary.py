@@ -11,7 +11,12 @@ while True:
     5)exit
     '''
     )
-    choice=int(input("enter a choice"))
+    while True:
+        try:
+            choice=int(input("enter a choice"))
+            break
+        except:
+            print('enter choice again')
     if choice==1:
         name=str(input('enter student name'))
         age=int(input('enter student age'))

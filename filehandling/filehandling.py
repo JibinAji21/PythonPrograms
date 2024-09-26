@@ -17,6 +17,7 @@
 # print(c)
 
 #reverse of a string 
+# ..............................................
 
 # d=f.readlines()
 # f.seek(0)
@@ -90,6 +91,54 @@
 # print('total capital letters',cap)
 # print('total small letters',letter-cap)
 # print(words)
+
+
+# append mode - ( adds content to the file without overwriting )
+# .................................................................
+
+
+# f=open('PythonPrograms/filehandling/demo.txt','a')
+# f.write('\nusing append')
+
+
+# delete mode - (deleting a python file or text file)
+# .......................................................
+
+
+# import os
+# os.remove('demo.txt')
+
+
+
+# to check if a file exist
+# ........................................................
+
+
+# import os
+# if os.path.exists('demo.txt'):
+#     print('file found')
+# else:
+#     print('file not found' )
+
+
+# to create a folder
+# ...................................
+
+# mkdir- make a dictionary
+
+# import os
+# os.mkdir('john cena')
+
+
+
+# to delete a folder
+# ..................................
+
+# rmdir- remove a dictionary
+
+# import os
+# os.rmdir('john cena')
+
 
   
 
