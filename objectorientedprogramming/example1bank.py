@@ -57,6 +57,30 @@
 #         print(a)
 # obj=demo(20,13)
 
+# '''4) Default argument : '''
+
+# class Demo:
+#     def __init__(self,name='jibin',amount=2000):
+#         print(name,amount)
+# obj=Demo('Aswin')
+# obj=Demo('Anu',25000)
+# obj=Demo(amount=22000)
+
+# output:
+
+# Aswin 2000
+# Anu 25000
+# jibin 22000
+
+# '''5) Arbitory keyword argument : '''
+
+# class Demo:
+#     def __init__(self,**a):
+#         print("a=",a)
+# obj=Demo(name='jibin',amount=20000)
+
+# output: a= {'name': 'jibin', 'amount': 20000}
+
 
 
 
