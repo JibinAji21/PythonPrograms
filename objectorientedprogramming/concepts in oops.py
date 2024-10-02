@@ -15,11 +15,17 @@
 
 # example:
 
-class synnefo:
-    def python():
-        print('python in synnefo')
-    def php ():
-        print('php in synnefo')
+# class synnefo:
+#     def python():
+#         print('python in synnefo')
+#     def php ():
+#         print('php in synnefo')
 
-std1=synnefo
-std1.python()
+# std1=synnefo
+# std1.python()
+
+
+# # inheritance
+
+
+
