@@ -38,4 +38,39 @@
 
 # add bank dtls
 # add user dtls
+
+
+# super() ( super function is used to solve polymorphism )
+
+# example
+
+# class school:
+#     def notes(self,sub):
+#         print("notes",sub)
+# class student(school):
+#     def notes(self):
+#         print("notes in student")
+#         super().notes('py')
+
+# john=student()
+# john.notes()
+
+
+# passing avalue to parent class
+
+
+# class school:
+#     def notes(self,sub):
+#         print("notes",sub)
+# class student(school):
+#     def notes(self,sub):
+#         print("notes in student")
+#         super().notes(sub)
+
+# john=student()
+# john.notes('py')
+
+
+
+
     
