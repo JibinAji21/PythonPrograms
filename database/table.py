@@ -156,6 +156,94 @@ except:
 # user=int(input("enter roll_no to delete"))
 # con.execute("delete from std where roll_no=?",(user,))
 # con.commit() 
+# .......................................................................................
+
+
+# like(used to display values using first letter,second letter,......,last letter)
+
+# 1)first letter
+
+# data=con.execute("select * from std where name like 'b%'")
+# for i in data:
+#     print(i)
+
+# # output
+
+# (7, 'bindu', 19, 86.0)
+
+# 2) second letter
+
+# data=con.execute("select * from std where name like '_u%'")
+# for i in data:
+#     print(i)
+
+#     # output
+
+#     (10, 'sunil', 22, 99.0)
+
+# 3) last letter
+
+# data=con.execute("select * from std where name like '%u'")
+# for i in data:
+#     print(i)
+
+# # output
+
+# (7, 'bindu', 19, 86.0)
+# ...................................................................................................
+
+# order by:(used to display table in assending order)
+# desc - is a keyword to convert ascending to decenting order
+
+
+# 1) ascenting order
+
+# data=con.execute("select * from std order by name")
+# for i in data:
+#     print(i)
+
+    # output
+
+    # (7, 'bindu', 19, 86.0)
+    # (11, 'krishnan', 21, 100.0)
+    # (10, 'sunil', 22, 99.0)
+
+# 2) decenting order
+
+# data=con.execute("select * from std order by name desc")
+# for i in data:
+#     print(i)
+
+# # output
+
+# (10, 'sunil', 22, 99.0)
+# (11, 'krishnan', 21, 100.0)
+# (7, 'bindu', 19, 86.0
+# .....................................................................................
+
+# group by:
+
+# agregate functions in sqlite 3:
+
+# 1) min
+# 2) max
+# 3) count
+# 4) sum
+# 5) avg
+
+# 1) maximum mark:
+
+# data=con.execute("select name,max(mark) from std group by name")
+# for i in data:
+#     print(i)
+
+    # output
+
+# ('bindu', 88.0)
+# ('krishnan', 100.0)
+# ('sunil', 99.0)
+
+
 
 
 

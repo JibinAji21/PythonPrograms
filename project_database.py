@@ -49,30 +49,42 @@ except:
                 if sub_choice==1:
                     name=input("enter current name")
                     new_name=input("enter new name")
-                    con.execute("update std set name =? where name=?",(new_name,name))
+                    con.execute("update emp set name =? where name=?",(new_name,name))
                     con.commit()
                 elif sub_choice==2:
                     age=input("enter current age")
                     new_age=input("enter new age")
-                    con.execute("update std set age =? where age=?",(new_age,age))
+                    con.execute("update emp set age =? where age=?",(new_age,age))
                     con.commit()
                 elif sub_choice==3:
                     place=input("enter current place")
                     new_place=input("enter new place")
-                    con.execute("update std set place =? where place=?",(new_place,place))
+                    con.execute("update emp set place =? where place=?",(new_place,place))
                     con.commit()
                 elif sub_choice==4:
                     post=input("enter current post")
                     new_post=input("enter new post")
-                    con.execute("update std set post =? where post=?",(new_post,post))
+                    con.execute("update emp set post =? where post=?",(new_post,post))
                     con.commit()
                 elif sub_choice==5:
                     phone=input("enter current phone")
                     new_phone=input("enter new phone")
-                    con.execute("update std set post =? where post=?",(new_phone,phone))
+                    con.execute("update emp set phone =? where phone=?",(new_phone,phone))
                     con.commit()
                 elif sub_choice==6:
                     break
+        elif choice==4:
+            user=int(input("enter id to delete"))
+            con.execute("delete from emp where id =?",(user,))
+            con.commit()
+        elif choice==5:
+             user=int(input("enter id"))
+             data=con.execute("select * from emp where id=?",(user,))
+             for i in data:
+                 print(i)
+        elif choice==6:
+            break
+            
 
 
 
