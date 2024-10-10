@@ -5,11 +5,11 @@
 #     f.write(str(i)+'*'+str(num)+'='+str(i*num)+"\n")
 
 
-#    Task
+# #    Task
 
-f=open('PythonPrograms/filehandling/mult2.txt','w')
-number=int(input("Enter a number : "))
-for i in range(1,11):
-    for j in range(1,number+1):
-        f.write(str(i)+'*'+str(j)+'='+str(j*i)+'\t')
-    f.write('\n')
+# f=open('PythonPrograms/filehandling/mult2.txt','w')
+# number=int(input("Enter a number : "))
+# for i in range(1,11):
+#     for j in range(1,number+1):
+#         f.write(str(i)+'*'+str(j)+'='+str(j*i)+'\t')
+#     f.write('\n')

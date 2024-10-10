@@ -20,12 +20,12 @@
 #     print("b is larger") 
 
 
-a=input("enter a number")
-b=input("enter a number")
-if a<b:
-    print("a is smaller")
-else:
-    print("b is larger")    
+# a=input("enter a number")
+# b=input("enter a number")
+# if a<b:
+#     print("a is smaller")
+# else:
+#     print("b is larger")    
 
 
 

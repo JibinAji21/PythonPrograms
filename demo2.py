@@ -7,22 +7,22 @@
 
 
 
-'''a='asd'
-print("a",type(a),a)
-b=str(a)
-print("b",type(b),b)
-c=int(a)
-print("c",type(c),c)'''
+# '''a='asd'
+# print("a",type(a),a)
+# b=str(a)
+# print("b",type(b),b)
+# c=int(a)
+# print("c",type(c),c)'''
 
 
-print("welcome \nto \nall")
-print("hello\tall")
-print('''welcome
-to
-all''')
+# print("welcome \nto \nall")
+# print("hello\tall")
+# print('''welcome
+# to
+# all''')
 
-item=input("enter item")
-price=int(input("enter price"))
-print("its an",item,"its price is",price,"rs")
-print(f"its an {item},its price is {price} rs")
-print('helo')
+# item=input("enter item")
+# price=int(input("enter price"))
+# print("its an",item,"its price is",price,"rs")
+# print(f"its an {item},its price is {price} rs")
+# print('helo')
